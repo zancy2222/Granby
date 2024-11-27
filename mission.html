@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission & Vision</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            
+            background-image: url(img/background1.jpg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+        }
+
+        .mission-card::before {
+            background: linear-gradient(90deg, #ff4e50, #f9d423);
+        }
+
+        .vision-card::before {
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: currentColor;
+            border-radius: 2px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+
+        .icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        ul {
+            text-align: left;
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        strong {
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Add subtle animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .mission-card {
+            animation-delay: 0.2s;
+        }
+
+        .vision-card {
+            animation-delay: 0.4s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card mission-card">
+        <h1>Mission</h1>
+        <div class="content">
+            <ul>
+                <li><strong>On Education:</strong> Produce world-class graduates by providing standard, quality, and affordable education and training to every able-bodied individual to meet the challenges of the third millennium.</li>
+                <li><strong>On Service:</strong> Extend community services to rural areas to enhance youths' civic consciousness and help them realize their role in protecting the ecological environment.</li>
+                <li><strong>On Character and Virtues:</strong> Indoctrinate students with proper ethics, acceptable norms, and good moral values inherent to Filipino customs and traditions; and prepare youths for quality leadership needed for a dynamic, continued democratic form of government.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card vision-card">
+        <h1>Vision</h1>
+        <div class="content">
+            <p>Granby Colleges of Science and Technology envisions a dynamic, world-class, and peace-loving Filipino society in a nation that is an actively participating member of the global community.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
